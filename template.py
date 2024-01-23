@@ -36,10 +36,10 @@ def APStatus():
 
 def CheckSSID_KSRO():
     sheet_TotalAP = workbook.add_worksheet('KSRO')
-    sheet_TotalAP.merge_range('A1:A2','Floor',header_format)
-    sheet_TotalAP.merge_range('B:K1','BSSID STATUS',header_format)
+    sheet_TotalAP.merge_range('A1:K1','BSSID STATUS',header_format)
 
     # Populate the template data
+    sheet_TotalAP.write('A2','Floor',header_format)
     sheet_TotalAP.write('B2', '@Enterprise', header_format)
     sheet_TotalAP.write('C2', 'Narita', header_format)
     sheet_TotalAP.write('D2', 'Challenger', header_format)
@@ -51,5 +51,43 @@ def CheckSSID_KSRO():
     sheet_TotalAP.write('J2', '@Telephone', header_format)
     sheet_TotalAP.write('K2', 'WASABI', header_format)
 
+def CheckSSID_KSRM():
+    sheet_TotalAP = workbook.add_worksheet('KSRM')
+    sheet_TotalAP.merge_range('A1:K1','BSSID STATUS',header_format)
+
+    # Populate the template data
+    sheet_TotalAP.write('A2','Floor',header_format)
+    sheet_TotalAP.write('B2', '@Enterprise', header_format)
+    sheet_TotalAP.write('C2', 'Narita', header_format)
+    sheet_TotalAP.write('D2', 'Challenger', header_format)
+    sheet_TotalAP.write('E2', 'Gesuto', header_format)
+    sheet_TotalAP.write('F2', 'Odaiba', header_format)
+    sheet_TotalAP.write('G2', 'Akiba', header_format)
+    sheet_TotalAP.write('H2', 'Atlantis', header_format)
+    sheet_TotalAP.write('I2', 'TABASCO', header_format)
+    sheet_TotalAP.write('J2', '@Telephone', header_format)
+    sheet_TotalAP.write('K2', 'WASABI', header_format)
+
+def CheckSSID_KSPO():
+    sheet_TotalAP = workbook.add_worksheet('KSPO')
+    sheet_TotalAP.merge_range('A1:K1','BSSID STATUS',header_format)
+
+    # Populate the template data
+    sheet_TotalAP.write('A2','Floor',header_format)
+    sheet_TotalAP.write('B2', '@Enterprise', header_format)
+    sheet_TotalAP.write('C2', 'Narita', header_format)
+    sheet_TotalAP.write('D2', 'Challenger', header_format)
+    sheet_TotalAP.write('E2', 'Gesuto', header_format)
+    sheet_TotalAP.write('F2', 'Odaiba', header_format)
+    sheet_TotalAP.write('G2', 'Akiba', header_format)
+    sheet_TotalAP.write('H2', 'Atlantis', header_format)
+    sheet_TotalAP.write('I2', 'TABASCO', header_format)
+    sheet_TotalAP.write('J2', '@Telephone', header_format)
+    sheet_TotalAP.write('K2', 'WASABI', header_format)
+
+APStatus()
+CheckSSID_KSRO()
+CheckSSID_KSRM()
+CheckSSID_KSPO()
 # Save the workbook
 workbook.close()

@@ -1,4 +1,6 @@
 from ssh import ssh_mc
+from template import *
+
 mm_ip = '172.20.20.100'
 
 ksrm_cluster =[]

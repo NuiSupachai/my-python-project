@@ -1,20 +1,41 @@
 import xlsxwriter
+workbook = xlsxwriter.Workbook('Morning Check List.xlsx')
+sheet_TotalAP = workbook.add_worksheet('AP Status')
+
+
+# Define cell formats for header
+header_format = workbook.add_format(
+    {   
+        'bold': True, 
+        'align': 'center',
+        'valign': 'vcenter',
+        'border':2,
+    }
+)
+# Define cell formats for data
+data_format = workbook.add_format(
+    {   
+        'align': 'center',
+        'valign': 'vcenter',
+        'border':2,
+    }
+)
 
 # Create a new Excel workbook and add a worksheet
-workbook = xlsxwriter.Workbook('template.xlsx')
-worksheet = workbook.add_worksheet('KSRM')
+def AP_Status():
+    sheet_TotalAP.merge_range('A1:F1','AP STAUS',header_format)
+    sheet_TotalAP.merge_range('A2:B2','KSRO',header_format)
+    sheet_TotalAP.merge_range('C2:D2','KSRM',header_format)
+    sheet_TotalAP.merge_range('E2:F2','KSPO',header_format)
+    # Populate the template data
+    sheet_TotalAP.write('A3', 'Up', header_format)
+    sheet_TotalAP.write('B3', 'Down', header_format)
+    sheet_TotalAP.write('C3', 'Up', header_format)
+    sheet_TotalAP.write('D3', 'Down', header_format)
+    sheet_TotalAP.write('E3', 'Up', header_format)
+    sheet_TotalAP.write('F3', 'Down', header_format)
 
-# Define cell formats for header and data
-header_format = workbook.add_format({'bold': True, 'align': 'center', 'valign': 'vcenter', 'bg_color': '#C6EFCE'})
-data_format = workbook.add_format({'align': 'center', 'valign': 'vcenter'})
+    # Save the workbook
+    workbook.close()
 
-# Populate the template data
-worksheet.write('A1', 'Name', header_format)
-worksheet.write('B1', 'Age', header_format)
-worksheet.write('A2', 'John', data_format)
-worksheet.write('B2', 25, data_format)
-worksheet.write('A3', 'Alice', data_format)
-worksheet.write('B3', 30, data_format)
-
-# Save the workbook
-workbook.close()
+AP_Status()

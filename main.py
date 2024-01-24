@@ -1,7 +1,7 @@
 from ssh import ssh_mc
 from template import *
 
-mm_ip = '172.20.20.100'
+mm_ip = '172.24.255.9'
 
 ksro_cluster =[]
 ksrm_cluster =[]

@@ -96,8 +96,8 @@ def CheckAPStatus(ap_ksro, ap_ksrm, ap_kspo):
             list_ksro_down.append(i)
     count_ap_ksro_up = len(list_ksro_up)
     count_ap_ksro_down = len(list_ksro_down)
-    sheet_TotalAP.write('A4', count_ap_ksro_up, header_format)
-    sheet_TotalAP.write('B4', count_ap_ksro_down, header_format)
+    sheet_TotalAP.write('A4', count_ap_ksro_up, data_format)
+    sheet_TotalAP.write('B4', count_ap_ksro_down, data_format)
 
     list_ksrm_up = []
     list_ksrm_down = []
@@ -111,8 +111,8 @@ def CheckAPStatus(ap_ksro, ap_ksrm, ap_kspo):
             list_ksrm_down.append(i)
     count_ap_ksrm_up = len(list_ksrm_up)
     count_ap_ksrm_down = len(list_ksrm_down)
-    sheet_TotalAP.write('C4', count_ap_ksrm_up, header_format)
-    sheet_TotalAP.write('D4', count_ap_ksrm_down, header_format)
+    sheet_TotalAP.write('C4', count_ap_ksrm_up, data_format)
+    sheet_TotalAP.write('D4', count_ap_ksrm_down, data_format)
 
     list_kspo_up = []
     list_kspo_down = []
@@ -126,8 +126,8 @@ def CheckAPStatus(ap_ksro, ap_ksrm, ap_kspo):
             list_kspo_down.append(i)
     count_ap_kspo_up = len(list_kspo_up)
     count_ap_kspo_down = len(list_kspo_down)
-    sheet_TotalAP.write('E4', count_ap_kspo_up, header_format)
-    sheet_TotalAP.write('F4', count_ap_kspo_down, header_format)
+    sheet_TotalAP.write('E4', count_ap_kspo_up, data_format)
+    sheet_TotalAP.write('F4', count_ap_kspo_down, data_format)
 
 APStatus()
 CheckSSID_KSRO()

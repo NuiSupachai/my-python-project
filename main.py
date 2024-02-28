@@ -758,7 +758,7 @@ RMUGA_AP04  RM3_Strongroom  205      172.18.128.12  Up 7d:23h:32m:51s    2      
 ap_db = ap_db.splitlines()
 for i in ap_db:
     list_apdb = i.split()
-    print(list_apdb)
+    #print(list_apdb)
     if list_apdb[7] =='172.28.254.2' or list_apdb[7] =='172.28.254.3':
         ap_ksro = list_apdb[7]
         ksro_cluster.append(ap_ksro)
